@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useCallback } from "react";
+// Takas Provider
+import TasksProvider from "./context/TasksProvider";
+// Tasks List Components
+import {
+  NewTask,
+  TodoListActions,
+  TasksList
 
+} from "./components";
+// toast
+import { ToastContainer } from 'react-toastify';
+//!=============================================================
 function App() {
+  // console.log("App Running");
+  const [AddTaskIsShown, setAddTaskIsShown] = useState(false);
+
+  // Show Add Task Modal Handler
+  const showAddTaskModalHandler = useCallback(() => {
+    setAddTaskIsShown(true);
+  }, []);
+
+  // Hide Add Task Modal Handler
+  const hideAddTaskModalHandler = useCallback(() => {
+    setAddTaskIsShown(false);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <ToastContainer />
+
+        <TasksProvider>
+          {AddTaskIsShown && <NewTask onHideModal={hideAddTaskModalHandler} />}
+          <TodoListActions onShowModal={showAddTaskModalHandler}/>
+          <TasksList />
+        </TasksProvider>
+      </>
   );
-}
+};
 
 export default App;

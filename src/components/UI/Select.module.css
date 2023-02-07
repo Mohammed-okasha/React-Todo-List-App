@@ -1,0 +1,24 @@
+.select label {
+    display: inline-block;
+    color: #202020;
+    padding-bottom: .25rem;
+}
+
+.select select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1.25rem;
+    background-color: #fff;
+    color: #202020;
+    border: 1px solid rgba(0 0 0 / 20%);
+    border-radius: .25rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    transition: .3s all;
+}
+
+.select select:focus {
+    outline: none;
+    border: 1px solid var(--primary);
+}

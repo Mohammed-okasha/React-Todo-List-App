@@ -1,0 +1,35 @@
+.task_content {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.task_content .task_info .task_title {
+    position: relative;
+    color: #333;
+    width: fit-content;
+    transition: .3s;
+}
+
+.task_content .task_info .task_title::before {
+    content: "";
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    height: 2px; width: 0;
+    background-color: #1eb400;
+    transition: .3s;
+}
+
+.task_content .task_info .task_title.completed {
+    color: #777;
+}
+
+.task_content .task_info .task_title.completed::before {
+    width: 100%;
+}
+
+.task_content .task_info .task_date {
+    font-size: 12px;
+    color: #666;
+}

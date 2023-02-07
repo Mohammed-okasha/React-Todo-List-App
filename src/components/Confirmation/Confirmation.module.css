@@ -1,0 +1,29 @@
+.confirmation {
+    text-align: center;
+}
+
+.confirmation .alert_icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(0 0 0 / 20%);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.confirmation .alert_icon svg {
+    font-size: 2rem;
+    color: #e00000;
+}
+
+.confirmation .confirmation_title {
+    color: #333;
+    margin: 1.25rem 0;
+    word-wrap: break-word;
+}
+
+.confirmation .confirmation_title span {
+    color: #009ae7;
+    text-decoration: underline;
+}

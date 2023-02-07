@@ -1,0 +1,20 @@
+.task_item {
+    background-color: #fff;
+    padding: 10px 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 5px;
+    animation: fadeUp .5s linear forwards;
+}
+
+.task_item:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

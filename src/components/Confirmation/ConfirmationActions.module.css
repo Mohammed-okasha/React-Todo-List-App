@@ -1,0 +1,31 @@
+.confirmation_actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.confirmation_actions .remove_btn {
+    border: none;
+    background-color: #25d500;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 0.25rem;
+    text-transform: capitalize;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s all ease-out;
+}
+
+.confirmation_actions .remove_btn:hover {
+    box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 40%);
+}
+
+@media (min-width: 0px) and (max-width: 350px) {
+    .confirmation_actions {
+        flex-flow: column;
+    }
+    .confirmation_actions > * {
+        width: 100%;
+    }
+}

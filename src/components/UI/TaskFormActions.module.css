@@ -1,0 +1,35 @@
+.task_form_actions {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.close_modal {
+    border: none;
+    background-color: #e00000;
+    color: #fff;
+    padding: .75rem 2rem;
+    border-radius: .25rem;
+    text-transform: capitalize;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s all ease-out;
+}
+
+.close_modal:focus {
+    outline: none;
+}
+
+.close_modal:hover {
+    box-shadow: 1px 1px 5px 0px rgba(0 0 0 / 40%);
+}
+
+@media (min-width: 0px) and (max-width: 350px) {
+    .task_form_actions {
+        flex-flow: column;
+    }
+    .task_form_actions > * {
+        width: 100%;
+    }
+}
