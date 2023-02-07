@@ -20,6 +20,9 @@ const TasksListContent = (props) => {
     // Content
     let content = <h3>there are no tasks!</h3>;
 
+    // There are tasks?
+    const thereAreTasks = tasksItems.length > 0;
+
     if (tasksList.length > 0) {
         content = (
             <ul>
@@ -44,8 +47,10 @@ const TasksListContent = (props) => {
                         {content}
                     </div>
                     <button type="button"
+                        disabled={!thereAreTasks}
                         className={classes.clear_btn}
                         onClick={props.onShowClearTaskModal}
+                        title={!thereAreTasks ? "No Tasks To Delete" : ""}
                     >
                         clear
                     </button>

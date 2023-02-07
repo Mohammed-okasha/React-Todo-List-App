@@ -38,6 +38,15 @@
     box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 40%);
 }
 
+.clear_btn:disabled,
+.clear_btn:disabled:hover,
+.clear_btn:disabled:focus,
+.clear_btn:disabled:active,
+.clear_btn:disabled:visited {
+    background-color: #e0000084;
+    cursor: not-allowed;
+}
+
 @media (max-width: 500px) {
     .tasks {
         margin-top: 1.25rem;
